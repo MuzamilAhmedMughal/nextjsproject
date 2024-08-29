@@ -2,11 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 interface sliderprops {
-  check2: () => void;
+  check: () => void;
   data: any;
 }
 export default function Slider(props: sliderprops) {
-  const { check2, data } = props;
+  const { check, data } = props;
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function Slider(props: sliderprops) {
             </p>
           </div>
         </div>
-        <button onClick={check2} className="w-full relative ">
+        <button onClick={check} className="w-full relative ">
           <FontAwesomeIcon
             className="absolute left-2 px-3 hover:opacity-45 fa-solid fa-arrow-right"
             icon={faArrowRight}
