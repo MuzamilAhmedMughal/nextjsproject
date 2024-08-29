@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 
-export default function page() {
+export default function Page() {
   const [data, setdata] = useState(null);
   const [show, setShow] = useState(false);
   const [error, setError] = useState(null);
