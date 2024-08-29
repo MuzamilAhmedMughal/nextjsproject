@@ -3,10 +3,8 @@ import Slider from "./(componants)/Slider";
 import Footer from "./(componants)/Footer";
 import Main from "./(componants)/Main";
 import { useEffect, useState } from "react";
-import as from "../../hello";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
-
 export default function page() {
   const [data, setdata] = useState();
   const [show, setShow] = useState(false);
@@ -22,8 +20,7 @@ export default function page() {
 
   useEffect(() => {
     async function fetchApi() {
-      const API_KEY = as;
-
+      const API_KEY = process.env.NEXT_PUBLIC_NASA_API_KEY;
       const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
       try {
         const response = await fetch(url);
